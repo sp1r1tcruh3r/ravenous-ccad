@@ -7,7 +7,6 @@ const Yelp = {
                 (response) => {return response.json();
                 }).then((jsonResponse) => {
                     if(jsonResponse.businesses){
-                        // console.log(jsonResponse.businesses);
                         return jsonResponse.businesses.map((business) => {
                             return {
                                 id : business.id,
@@ -23,7 +22,7 @@ const Yelp = {
                             }
                         });
                     }
-                    // throw new Error('Request failed!');
+throw new Error('Request failed!');
                 })
 
     }
